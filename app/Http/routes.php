@@ -30,6 +30,8 @@ Route::group(['prefix' => 'service'], function () {
 	Route::post('register', 'Service\MemberController@register');
 	Route::post('login', 'Service\MemberController@login');
 	Route::any('category/parent_id/{parent_id}', 'Service\BookController@getCategoryByParentId');
+	Route::any('cart/add/{product_id}', 'Service\CartController@addCart');
+
     });
 
 /*Route::any('service/validate_code/create', 'Service\ValidateController@create');
